@@ -6,3 +6,6 @@ Router.configure
 Router.route '/',
   name: 'home'
   layoutTemplate: 'Layout'
+  action: () ->
+  	@render 'Home'
+  	@render 'HomeMenu', to: 'layoutMenu'

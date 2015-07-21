@@ -1,3 +1,132 @@
 <template name="Home">
-  <h1>Find me in app/client/templates/home/home</h1>
+  {{> HomeHead}}
+  {{> HomeAbout}}
+  {{> HomePrices}}
+  {{> HomeContact}}
+</template>
+
+<template name="HomeHead">
+  <div class="row">
+  	<div class="col-md-5 col-lg-5">
+  		<h1>Team-A</h1>
+  		<p class="text-justify"> loredfsfgdflo redfsfgdflore dfsfgdfloredfs fgdfloredfsfgdf loredfsfgdfloredfs fgdfloredfsfgdfloredf sfgdfloredfsfgdf
+  		loredfsfgdfloredfsfg dfloredfs fgdfloredfsfgdfloredfsfgdf
+  		lored fsfgdfloredfsfgdfl oredfsfgdfloredfsfgdfv
+  		loredfsf gdfloredfsfgd floredfsf gdfloredfsfgdfv</p>
+  		<br>
+  		<button class="btn btn-primary btn-lg col-md-12 col-lg-12 text-uppercase">
+  			Sign up
+  		</button>
+  		<p class="text-center">
+  			<a href="#" class="lead">Try now for free</a>
+  		</p>
+  	</div>
+  	<div class="col-md-7 col-lg-7">
+  		<img class="img-responsive" src="http://lorempixel.com/1024/768/business" alt="business">
+  	</div>
+  </div>
+</template>
+
+<template name="HomeAbout">
+	<div class="row">
+		<div class="col-md-12 col-lg-12 well text-center">
+			<h2 class="text-uppercase">About</h2>
+			<p class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8 text-muted"> loredfsfgdflo redfsfgdflore dfsfgdfloredfs fgdfloredfsfgdf loredfsfgdfloredfs fgdfloredfsfgdfloredf sfgdfloredfsfgdf
+	  		loredfsfgdfloredfsfg dfloredfs fgdfloredfsfgdfloredfsfgdf
+	  		lored fsfgdfloredfsfgdfl oredfsfgdfloredfsfgdfv
+	  		loredfsf gdfloredfsfgd floredfsf gdfloredfsfgdfv</p>
+	  		<iframe width="560" height="315" src="https://www.youtube.com/embed/aVS4W7GZSq0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+</template>
+
+<template name="HomePrices">
+	<div class="row">
+		<div class="col-md-12 col-lg-12 text-center">
+			<h2 class="text-uppercase">Prices</h2>
+			<p class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8 text-muted"> loredfsfgdflo redfsfgdflore dfsfgdfloredfs fgdfloredfsfgdf loredfsfgdfloredfs fgdfloredfsfgdfloredf sfgdfloredfsfgdf
+	  		loredfsfgdfloredfsfg dfloredfs fgdfloredfsfgdfloredfsfgdf
+	  		lored fsfgdfloredfsfgdfl oredfsfgdfloredfsfgdfv
+	  		loredfsf gdfloredfsfgd floredfsf gdfloredfsfgdfv</p>
+	  		<div class="row">
+	  			<div class="col-md-3 col-lg-3 price-block">
+	  				<div class="text-uppercase price-item center-block">
+	  					<span>Free</span>
+	  				</div>
+	  				<span>5 members</span>
+	  			</div>
+	  			<div class="col-md-3 col-lg-3 price-block ">
+	  				<div class="text-uppercase price-item center-block">
+	  					<span>50$/month</span>
+	  				</div>
+	  				<span>5 members</span>
+	  			</div>
+	  			<div class="col-md-3 col-lg-3 price-block">
+	  				<div class="text-uppercase price-item center-block">
+	  					<span>100$/mont</span>
+	  				</div>
+	  				<span>150 members</span>
+	  			</div>
+	  			<div class="col-md-3 col-lg-3 price-block">
+	  				<div class="text-uppercase price-item center-block">
+	  					<span>20$/mont</span>
+	  				</div>
+	  				<span>300 members</span>
+	  			</div>
+	  		</div>
+		</div>
+	</div>
+</template>
+
+
+<template name="HomeContact">
+	<div class="row">
+		<div class="col-md-12 col-lg-12 well text-center">
+			<h2 class="text-uppercase">Contact us</h2>
+			<p class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8 text-muted"> loredfsfgdflo redfsfgdflore dfsfgdfloredfs fgdfloredfsfgdf loredfsfgdfloredfs fgdfloredfsfgdfloredf sfgdfloredfsfgdf
+	  		loredfsfgdfloredfsfg dfloredfs fgdfloredfsfgdfloredfsfgdf
+	  		lored fsfgdfloredfsfgdfl oredfsfgdfloredfsfgdfv
+	  		loredfsf gdfloredfsfgd floredfsf gdfloredfsfgdfv</p>
+	  		<div class="row">
+	  			<div class="col-md-6 col-lg-6 text-right">
+	  				<address>
+					  <strong>Twitter, Inc.</strong><br>
+					  795 Folsom Ave, Suite 600<br>
+					  San Francisco, CA 94107<br>
+					  <abbr title="Phone">P:</abbr> (123) 456-7890
+					</address>
+
+					<address>
+					  <strong>Full Name</strong><br>
+					  <a href="mailto:#">first.last@example.com</a>
+					</address>
+	  			</div>
+	  			<div class="col-md-6 col-lg-6">
+	  				<img class="img-responsive" src="http://lorempixel.com/1024/768/city" alt="city">
+	  			</div>
+	  			<div class="">
+		  			<p>
+		  				Social network
+		  			</p>
+	  			</div>
+	  			<div class="row">
+	  				<div class="col-md-offset-3 col-md-2">
+	  					<a href="#" class="text-default">
+	  						<i class="fa fa-facebook-square fa-5x"></i>
+	  					</a>
+	  				</div>
+	  				<div class="col-md-2">
+	  					<a href="#" class="text-default">
+	  						<i class="fa fa-twitter-square fa-5x"></i>
+	  					</a>
+	  				</div>
+	  				<div class="col-md-2">
+	  					<a href="#" class="text-default">
+	  						<i class="fa fa-google-plus-square fa-5x"></i>
+	  					</a>
+	  				</div>
+	  			</div>
+	  		</div>
+		</div>
+	</div>
 </template>
