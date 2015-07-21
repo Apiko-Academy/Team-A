@@ -5,7 +5,7 @@ Team and project planning tool
 You should deploy current progress every time after finish of work on some task.
 After that you will be able mark your card as "Done".
 
-Testing server: [team-b.meteor.com](http://team-b.meteor.com/)  
+Testing server: [team-a.meteor.com](http://team-a.meteor.com/)  
 Production server: *not yet exists*
 
-You can simply type `meteor deploy team-b` to initiate deployment process.
+You can simply type `meteor deploy team-a` to initiate deployment process.
