@@ -1,7 +1,8 @@
 Router.configure
-  layoutTemplate: 'MasterLayout'
+  layoutTemplate: 'SimpleLayout'
   loadingTemplate: 'Loading'
   notFoundTemplate: 'NotFound'
 
 Router.route '/',
   name: 'home'
+  layoutTemplate: 'Layout'
