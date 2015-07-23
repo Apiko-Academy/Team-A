@@ -23,3 +23,9 @@ Router._scrollToHash = (hash) ->
       scrollTop: $section.offset().top
     ,
       'slow'
+
+Router.route '/company/new',
+  name: 'createCompany'
+  layoutTemplate: 'Layout'
+  action: () ->
+    @render 'CreateCompany'
