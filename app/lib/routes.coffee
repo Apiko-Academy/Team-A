@@ -15,6 +15,9 @@ Router.route '/',
     @render 'Home'
     @render 'HomeMenu', to: 'layoutMenu'
 
+Router.route '/access-forbidden',
+  name: 'accessForbidden'
+
 Router._scrollToHash = (hash) ->
   hash = 'body' unless hash.length
   $section = $ hash
@@ -30,3 +33,11 @@ Router.route '/company/create',
   action: () ->
     @render 'CreateCompany'
     @render 'CreateCompanyMenu', to: 'layoutMenu'
+
+Router.onBeforeAction () ->
+  if Meteor.userId()
+    @next()
+  else
+    Router.go 'accessForbidden' 
+,
+  only: ['createCompany']
