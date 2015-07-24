@@ -24,7 +24,7 @@ Router._scrollToHash = (hash) ->
     ,
       'slow'
 
-Router.route '/company/new',
+Router.route '/company/create',
   name: 'createCompany'
   layoutTemplate: 'Layout'
   action: () ->
