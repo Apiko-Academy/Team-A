@@ -16,4 +16,4 @@ schema = new SimpleSchema
     minCount: 0
     maxCount: 256
 
-Namespace 'schemas', Projects:schema
+Namespace 'schemas', Project:schema
