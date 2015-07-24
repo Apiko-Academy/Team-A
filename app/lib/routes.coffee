@@ -29,3 +29,4 @@ Router.route '/company/create',
   layoutTemplate: 'Layout'
   action: () ->
     @render 'CreateCompany'
+    @render 'CreateCompanyMenu', to: 'layoutMenu'
