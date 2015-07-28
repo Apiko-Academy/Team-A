@@ -5,13 +5,15 @@ schema = new SimpleSchema
     min: 2
     max: 140
   photo:
-    type: Mongo.ObjectID
+    type: [String]
+    regEx: regEx: SimpleSchema.RegEx.Id
     label: 'Photo'
     optional: true
   companies:
   	type: [Mongo.ObjectId]
   	label: 'Companies'
   	defaultValue: []
-
+  'companies.$'
+    regEx: SimpleSchema.RegEx.Id
 
 Namespace 'schemas', UserProfile:schema

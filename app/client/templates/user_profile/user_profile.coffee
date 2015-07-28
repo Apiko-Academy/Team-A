@@ -11,5 +11,5 @@ Template.UserProfile.helpers
       'None'
 
   userInitials: () ->
-    fullName = Meteor.user().profile.fullName
+    fullName = Meteor.user().profile.fullname
     [x[0].upper() for x in fullName.split(' ')].join('')
