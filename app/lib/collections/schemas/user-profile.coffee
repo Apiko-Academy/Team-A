@@ -6,7 +6,7 @@ schema = new SimpleSchema
     max: 140
   photo:
     type: [String]
-    regEx: regEx: SimpleSchema.RegEx.Id
+    regEx: SimpleSchema.RegEx.Id
     label: 'Photo'
     optional: true
   companies:
