@@ -3,6 +3,6 @@ AutoForm.addHooks ['insertCompanyForm'],
     Router.go 'home'
   onError: (action, error) ->
     Winston.warn """
-      User ##{Meteor.userId()} got an error '#{error.message}' at 'insertCompanyForm' form.
+      User '#{Meteor.userId()}' got an error '#{error.message}' at 'insertCompanyForm' form.
     """
     sAlert.error error.message

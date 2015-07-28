@@ -27,6 +27,10 @@ Router._scrollToHash = (hash) ->
     ,
       'slow'
 
+Router.route '/user/profile',
+  name: 'userProfile'
+  layoutTemplate: 'Layout'
+
 Router.goToAccessForbidden = () ->
   url = Iron.Location.get().path
   Winston.warn "Request to forbidden url \"#{url}\""
@@ -49,4 +53,4 @@ Router.onBeforeAction () ->
   else
     Router.go 'accessForbidden' 
 ,
-  only: ['createCompany']
+  only: ['createCompany', 'userProfile']
