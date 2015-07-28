@@ -27,12 +27,21 @@ Router._scrollToHash = (hash) ->
     ,
       'slow'
 
+Router.goToAccessForbidden = () ->
+  url = Iron.Location.get().path
+  Winston.warn "Request to forbidden url \"#{url}\""
+  Router.go 'accessForbidden'
+
 Router.route '/company/create',
   name: 'createCompany'
   layoutTemplate: 'Layout'
   action: () ->
     @render 'CreateCompany'
     @render 'CreateCompanyMenu', to: 'layoutMenu'
+
+Router.onStop () ->
+  url = Iron.Location.get().path
+  Session.set 'previousUrl', url
 
 Router.onBeforeAction () ->
   if Meteor.userId()

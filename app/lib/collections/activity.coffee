@@ -5,12 +5,17 @@ Activity.allow
   update: -> true
   remove: -> true
 
+denyChecker = (userId) ->
+  deny = not Meteor.userId()
+  if deny
+    Winston.warn '''
+      non-authorized user tries to get access to activity collection
+    '''
+  deny
+
 Activity.deny
-  insert: (userId) -> 
-  	not Meteor.userId()
-  update: (userId) ->
-  	not Meteor.userId()
-  remove: (userId) ->
-  	not Meteor.userId()
+  insert: denyChecker
+  update: denyChecker
+  remove: denyChecker
 
 Activity.attachSchema schemas.Activity
