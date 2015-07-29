@@ -5,11 +5,11 @@ schema = new SimpleSchema
     min: 2
     max: 64
   startDate:
-  	type: Date
-  	label: 'Start date'
+    type: Date
+    label: 'Start date'
   endDate:
-  	type: Date
-  	label: 'End date'
+    type: Date
+    label: 'End date'
   
 
 Namespace 'schemas', Holiday:schema

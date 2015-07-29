@@ -1,6 +1,6 @@
-@Companies = new Mongo.Collection 'companies'
+@Activities = new Mongo.Collection 'activities'
 
-Companies.allow
+Activities.allow
   insert: -> true
   update: -> true
   remove: -> true
@@ -9,15 +9,13 @@ denyChecker = (userId) ->
   deny = not Meteor.userId()
   if deny
     Winston.warn '''
-      non-authorized user tries to get access to companies collection
+      non-authorized user tries to get access to activity collection
     '''
   deny
 
-Companies.deny
+Activities.deny
   insert: denyChecker
   update: denyChecker
   remove: denyChecker
 
-
-Companies.attachSchema schemas.Company
-
+Activities.attachSchema schemas.Activity

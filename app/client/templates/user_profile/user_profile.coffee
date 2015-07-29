@@ -3,13 +3,15 @@ Template.UserProfile.helpers
     if Meteor.user()
       Meteor.user().emails[0].address
   userRole: () ->
-    if Roles.userIsInRole Meteor.userId(), 'admin'
-      'Owner'
-    else if Roles.userIsInRole Meteor.userId(), 'invited'
+    user = Meteor.user()
+    if Roles.userIsInRole user._id, 'admin'
+      'Admin'
+    else if user.profile.companies.length
+      
       'invited User'
     else
       'None'
 
   userInitials: () ->
-    fullName = Meteor.user().profile.fullname
-    [x[0].upper() for x in fullName.split(' ')].join('')
+    fullname = Meteor.user().profile.fullname
+    [x[0].toUpperCase() for x in fullname.split(' ')].join('')

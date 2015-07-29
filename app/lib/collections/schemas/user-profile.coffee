@@ -10,9 +10,9 @@ schema = new SimpleSchema
     label: 'Photo'
     optional: true
   companies:
-  	type: [Mongo.ObjectId]
-  	label: 'Companies'
-  	defaultValue: []
+    type: [Mongo.ObjectId]
+    label: 'Companies'
+    defaultValue: []
   'companies.$'
     regEx: SimpleSchema.RegEx.Id
 
