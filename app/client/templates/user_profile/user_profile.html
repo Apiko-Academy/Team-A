@@ -42,5 +42,27 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="cpl-md-12 col-lg-12">
+        <h3>
+          Settings
+          &nbsp;
+          <a class="settings-area-toggle-btn" data-toggle="collapse" href="#settings-area" aria-expanded="false" aria-controls="settings-area">
+            <i class="fa fa-eye"></i>
+            <i class="fa fa-eye-slash"></i>
+          </a>
+        </h3>
+        <div class="collapse" id="settings-area">
+          <p>
+            {{#linkTo route='atresetPwd'}}
+              RESET PASSWORD
+            {{/linkTo}}
+          </p>
+          <p>
+            <a href="#" class="text-danger">DELETE ACCOUNT</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>

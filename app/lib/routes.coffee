@@ -26,6 +26,9 @@ Router.route '/',
     @render 'Home'
     @render 'HomeMenu', to: 'layoutMenu'
 
+AccountsTemplates.configureRoute 'resetPwd',
+  layoutTemplate: 'Layout'
+
 Router.route '/access-forbidden',
   name: 'accessForbidden'
 
