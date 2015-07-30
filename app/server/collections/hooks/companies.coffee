@@ -1,5 +1,6 @@
 Companies.after.insert (userId, doc) ->
   user = Meteor.users.findOne _id: userId
-  if user
+  if Meteor.isServer and user
     Meteor.users.update userId, $push:
-      'profile.companies': doc._id
+     'profile.companies': doc._id
+

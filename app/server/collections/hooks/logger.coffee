@@ -41,3 +41,4 @@ generateMessage = (collectionInfo) ->
 
 _.each collections, (collectionInfo) ->
   generateMessage collectionInfo
+

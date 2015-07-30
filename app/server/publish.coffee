@@ -8,3 +8,4 @@ Meteor.publishComposite 'fullUserProfile',
       Companies.find _id:
         $in: companies
   ]
+

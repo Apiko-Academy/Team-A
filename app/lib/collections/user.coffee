@@ -10,3 +10,4 @@ Meteor.users._transform = (user) ->
       company
     user.profile.companies = companies
   user
+
