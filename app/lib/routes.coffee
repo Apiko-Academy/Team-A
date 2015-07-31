@@ -46,6 +46,9 @@ Router.route '/user/profile',
   waitOn: () ->
     Meteor.subscribe 'fullUserProfile'
   layoutTemplate: 'Layout'
+  action: () ->
+    @render 'UserProfile'
+    @render 'DefaultMenu', to: 'layoutMenu'
 
 Router.goToAccessForbidden = () ->
   url = Iron.Location.get().path
@@ -57,7 +60,7 @@ Router.route '/company/create',
   layoutTemplate: 'Layout'
   action: () ->
     @render 'CreateCompany'
-    @render 'CreateCompanyMenu', to: 'layoutMenu'
+    @render 'DefaultMenu', to: 'layoutMenu'
 
 Router.onStop () ->
   url = Iron.Location.get().path
