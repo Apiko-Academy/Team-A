@@ -11,3 +11,11 @@ Meteor.users._transform = (user) ->
     user.profile.companies = companies
   user
 
+Meteor.users.allow
+  insert: -> true
+  update: -> true
+  remove: (userId, doc) ->
+    _.some [
+      userId is doc._id
+      Roles.userIsInRole userId, 'admin'
+    ]
