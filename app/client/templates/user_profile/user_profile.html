@@ -12,9 +12,21 @@
                    initials=userInitials}}
       </div>
       <div class="col-md-9 col-lg-9">
-        <p class="lead">{{currentUser.profile.fullName}}</p>
+        <p class="lead">
+          {{>Popup text=currentUser.profile.fullname 
+                    afId='userFullname'
+                    collection=collections.users
+                    document=currentUser 
+                    field='profile.fullname'}}
+        </p>
+        
         <p>
-          <b>Email:</b>
+          <b>{{>Popup text='Emails:'
+                      afId='userEmails'
+                      collection=collections.users 
+                      document=currentUser 
+                      field='emails.0.address'}}
+          </b>
           &nbsp;
           <a href="mailto:{{userEmail}}">
             {{userEmail}}
@@ -47,7 +59,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="cpl-md-12 col-lg-12">
+      <div class="cpl-md-6 col-lg-6">
         <h3>
           Settings
           &nbsp;
