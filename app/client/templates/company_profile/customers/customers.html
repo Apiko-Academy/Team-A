@@ -1,13 +1,26 @@
-<template name="Customers">
-  {{# each allCust}}
-    {{>Popup text=value.name
+<template name = "CustomerItem">
+  {{>Popup text=value.name
               afId=afId
               collection=collections.companies 
               document=../CompanyInfo
               field=fieldName
               setArrayItems=true}}
-    <a href="#" class="text-danger" data-action="remove-customer" data-field={{fieldName}}>
+    <a href="#" class="text-danger" data-action="remove-customer">
       <i class="fa fa-trash"></i>
     </a>
+</template>
+
+<template name="Customers">
+  <a href="#" class="text-primary add-customer">
+    <i class="fa fa-plus-square fa-2x"></i>
+  </a>
+  <div class="customer-popover fade right in" role="tooltip" style="background-color: #d3d3d3; display:none">
+    <div class="popover-content">
+      And here's some amazing content. It's very engaging. Right?
+    </div>
+  </div>
+
+  {{# each allCust}}
+    <h5><b>{{>CustomerItem}}</b></h5>
   {{/ each}}
 </template>

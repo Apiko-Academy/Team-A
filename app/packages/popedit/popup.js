@@ -13,7 +13,6 @@ Template.Popup.onRendered(function () {
       self.$('.popup').toggle();
     }
   });
-  self.data = _.extend({setArrayItems: false}, self.data);
   console.log('Template.Popup.data', self.data);
 });
     // Template.currentData().text

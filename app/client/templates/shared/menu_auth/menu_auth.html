@@ -16,6 +16,13 @@
           {{/ linkTo}}
         </li>
         <li>
+          {{# if isInRole 'admin'}}
+            {{#linkTo route='adminDashboard'}}
+              Admin Dashboard
+            {{/linkTo}}
+          {{/ if}}
+        </li>
+        <li>
           <a href="#" data-action="sign-out">Sign out</a>
         </li>
       </ul>

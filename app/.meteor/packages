@@ -38,3 +38,5 @@ reywood:publish-composite
 jquery
 teama:popedit
 dburles:mongo-collection-instances
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker

@@ -6,15 +6,21 @@ Template.Customers.helpers
         fieldName: "customers.#{index}.name"
         value: item
 
-Template.Customers.events
+Template.CustomerItem.events
   'click [data-action="remove-customer"]': (e) ->
     e.preventDefault()
-    console.log $(event.target).data('field')
+    console.log Template.currentData()
     Companies.update(
         { _id: Companies.findOne()._id },
         { $pull: 
             { customers: 
-                {name: $(event.target).data('field') } }
+                {name: Template.currentData().value.name } }
         }
     )
-    
+
+
+Template.Customers.events
+  'click .add-customer': (e) ->
+    e.preventDefault()
+    console.log "clicked"
+    $('.customer-popover').toggle()

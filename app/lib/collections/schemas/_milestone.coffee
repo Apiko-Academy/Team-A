@@ -13,5 +13,7 @@ schema =  new SimpleSchema
   date:
     type: Date
     label: 'Date'
+    autoform:
+      type: 'bootstrap-datepicker'
 
 Namespace 'schemas', Milestone:schema
