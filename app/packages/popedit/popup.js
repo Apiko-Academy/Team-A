@@ -1,7 +1,6 @@
 Template.Popup.events({
   "click .to-click": function(e){
     var tpl = Template.instance();
-    $('content').css("background-color","#f5f5f5");
     tpl.$('.popup').toggle();
   }
 });
@@ -14,6 +13,8 @@ Template.Popup.onRendered(function () {
       self.$('.popup').toggle();
     }
   });
+  self.data = _.extend({setArrayItems: false}, self.data);
+  console.log('Template.Popup.data', self.data);
 });
     // Template.currentData().text
     // Template.instance().data().text

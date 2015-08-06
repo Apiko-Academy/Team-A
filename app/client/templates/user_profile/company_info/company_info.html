@@ -1,14 +1,19 @@
 <template name = "CompanyInfo">
   <div class="col-md-3 col-lg-3">
-    {{# linkTo}}
-      {{this.name}}
-    {{/linkTo}}
+    
     {{# if this.isOwner}}
+      {{# linkTo route="companyProfile"}}
+        {{this.name}}
+      {{/linkTo}}
       <i class="fa fa-check"
           data-toggle="tooltip"
           data-placement="top"
           title="Owner">
       </i>
+    {{else}}
+      {{# linkTo}}
+        {{this.name}}
+      {{/linkTo}}
     {{/if}}
     <a href="#" class="text-danger" data-action="remove-company">
       <i class="fa fa-trash"></i>

@@ -1,0 +1,13 @@
+<template name="Customers">
+  {{# each allCust}}
+    {{>Popup text=value.name
+              afId=afId
+              collection=collections.companies 
+              document=../CompanyInfo
+              field=fieldName
+              setArrayItems=true}}
+    <a href="#" class="text-danger" data-action="remove-customer" data-field={{fieldName}}>
+      <i class="fa fa-trash"></i>
+    </a>
+  {{/ each}}
+</template>

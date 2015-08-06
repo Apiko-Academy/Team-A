@@ -1,0 +1,56 @@
+<template name="CompanyProfileMenuItem">
+  <li role="presentation" class="menu-btn">
+    <a>
+      <b>{{text}}</b>
+    </a>
+  </li>
+</template>
+
+<template name="CompanyProfile">
+  {{#if currentUser}}
+    <div class="row">
+      <div class="col-md-3 col-lg-3">
+        <p class="pull-right">avatar</p>
+      </div>
+      <div class="col-md-9 col-lg-9">
+        <h2>
+          {{>Popup text=CompanyInfo.name
+                    afId='companyName'
+                    collection=collections.companies 
+                    document=CompanyInfo
+                    field="name"}}
+        </h2>
+      </div>
+    </div>
+
+    <hr>
+    
+    <div class="row">
+      <div class="col-md-3 col-lg-3">
+        <ul class="nav nav-pills nav-stacked pull-right">
+          {{> CompanyProfileMenuItem section='com-proj' text='Projects'}}
+          {{> CompanyProfileMenuItem section='com-cust' text='Customers'}}
+          {{> CompanyProfileMenuItem section='com-users' text='Users'}}
+          {{> CompanyProfileMenuItem section='com-res' text='Resourses'}}
+        </ul>
+      </div>
+
+      <div class="col-md-9 col-lg-9">
+        <div class="com-pr-con com-proj">
+          {{>Projects}}
+        </div>
+        <div class="com-pr-con com-cust">
+          {{>Customers}}
+        </div>
+        <div class="com-pr-con com-users">
+          {{>Users}}
+        </div>
+        <div class="com-pr-con com-res">
+          {{>Resourses}}
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <h2>Nope</h2>
+  {{/if}}
+</template>

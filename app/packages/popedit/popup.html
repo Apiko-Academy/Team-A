@@ -1,12 +1,12 @@
 <template name="Popup">
-  <div class="content">
+  <div>
     {{text}}
     <i class="fa fa-pencil to-click"></i>
   </div>
   <div class="row">
     <div class="col-md-3 col-lg-3">
       <div class="popup">
-        {{#autoForm id=afId type="update" collection=collection doc=document}}
+        {{#autoForm id=afId type="update" collection=collection doc=document setArrayItems=setArrayItems}}
           {{> afQuickField name=field}}
           <div class="form-group">
             <button type="submit" class="btn btn-primary submit-popup">Submit</button>

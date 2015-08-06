@@ -62,6 +62,17 @@ Router.route '/company/create',
     @render 'CreateCompany'
     @render 'DefaultMenu', to: 'layoutMenu'
 
+Router.route '/companyinfo/:_id',
+  name: 'companyProfile'
+  layoutTemplate: 'Layout'
+  waitOn: () ->
+    Meteor.subscribe 'companyInfo', @params._id
+  action: () ->
+    @render 'CompanyProfile'
+    @render 'DefaultMenu', to: 'layoutMenu'
+  data: () ->
+    CompanyInfo: Companies.findOne()
+
 Router.onStop () ->
   url = Iron.Location.get().path
   Session.set 'previousUrl', url
