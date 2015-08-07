@@ -13,6 +13,8 @@ schema = new SimpleSchema
   milestones:
     type: [schemas.Milestone]
     label: 'Milestones'
+    optional: true
+    defaultValue: []
     minCount: 0
     maxCount: 256
 

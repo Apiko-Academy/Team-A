@@ -2,6 +2,7 @@ Template.Customers.helpers
   allCust: () ->
     _.map Template.currentData().CompanyInfo.customers, (item, index) ->
       newCust =
+        index: index+1
         afId: "companyCustomer#{index}"
         fieldName: "customers.#{index}.name"
         value: item
@@ -18,7 +19,7 @@ Template.CustomerItem.events
     )
 
 
-Template.Customers.events
+Template.AddCustomer.events
   'click .add-customer': (e) ->
     e.preventDefault()
     $('.customer-popover').toggle()

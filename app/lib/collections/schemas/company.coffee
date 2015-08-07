@@ -14,8 +14,8 @@ schema = new SimpleSchema
     type: [schemas.Project]
     label: 'Projects'
     defaultValue: []
-    min: 0
-    max: 2 ** 32
+    minCount: 0
+    maxCount: 2 ** 32
   owner:
     type: String
     regEx: SimpleSchema.RegEx.Id
@@ -29,8 +29,8 @@ schema = new SimpleSchema
     type: [schemas.Customer]
     label: 'Customers'
     defaultValue: []
-    min: 0
-    max: 2 ** 16
+    minCount: 0
+    maxCount: 2 ** 16
 
 
 Namespace 'schemas', Company:schema

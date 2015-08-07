@@ -7,3 +7,4 @@ Template.Home.events
         if trackerComputation
           trackerComputation.stop()
         Router.go 'atSignUp'
+

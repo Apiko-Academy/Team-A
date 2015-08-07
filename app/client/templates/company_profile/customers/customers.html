@@ -10,11 +10,7 @@
     </a>
 </template>
 
-<template name="Customers">
-  <a href="#" class="text-primary add-customer">
-    <i class="fa fa-plus-square fa-2x"></i>
-  </a>
-
+<template name = "AddCustomer">
   <div class="row">
     <div class="col-md-4 col-lg-4">
       <div class="customer-popover fade right in">
@@ -31,8 +27,33 @@
       </div>
     </div>
   </div>
+  <a href="#" class="text-primary add-customer">
+    <i class="fa fa-plus-square fa-2x"></i>
+  </a>
+</template>
 
-  {{# each allCust}}
-    <h5><b>{{>CustomerItem}}</b></h5>
-  {{/ each}}
+<template name="Customers">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th colspan="2">Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{# each allCust}}
+      <tr>
+        <td>
+          <b>{{index}}</b>
+        </td>
+        <td>
+          <h5><b>{{>CustomerItem}}</b></h5>
+        </td>
+      </tr>
+    {{/ each}}
+    </tbody>
+  </table>
+  <div>
+    {{>AddCustomer}}
+  </div>
 </template>
