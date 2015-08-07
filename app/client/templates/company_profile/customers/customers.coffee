@@ -9,7 +9,6 @@ Template.Customers.helpers
 Template.CustomerItem.events
   'click [data-action="remove-customer"]': (e) ->
     e.preventDefault()
-    console.log Template.currentData()
     Companies.update(
         { _id: Companies.findOne()._id },
         { $pull: 
@@ -22,5 +21,15 @@ Template.CustomerItem.events
 Template.Customers.events
   'click .add-customer': (e) ->
     e.preventDefault()
-    console.log "clicked"
     $('.customer-popover').toggle()
+  'click .add-customer-btn': (e) ->
+    customer = document.getElementById("customer-input")
+    Companies.update(
+        { _id: Companies.findOne()._id },
+        { $push: 
+            { customers: 
+                {name: customer.value } }
+        }
+    )
+    customer.value=''
+    $('.customer-popover').hide()
